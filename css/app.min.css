@@ -967,6 +967,10 @@ body {
   width: 0%;
 }
 
+.hide {
+  display: none !important;
+}
+
 .opBtn {
   border: 0;
   background-color: rgba(255, 255, 255, 0);
@@ -1132,6 +1136,7 @@ body {
   background-repeat: no-repeat;
   color: #fff;
   padding-left: 4em;
+  position: relative;
 }
 .hero .hero__inner {
   padding-bottom: 10em;
@@ -1181,6 +1186,39 @@ body {
   max-width: 300px;
 }
 
+.develForm__attetion {
+  position: absolute;
+  bottom: 0em;
+  left: 68em;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 1em;
+     -moz-column-gap: 1em;
+          column-gap: 1em;
+  padding: 24px 46px;
+  color: #484848;
+  cursor: pointer;
+}
+.develForm__attetion .caption {
+  max-width: 100px;
+}
+.develForm__attetion .doubleArrowDown {
+  border-radius: 100%;
+  border: 1px #E8E8E8 solid;
+  width: 61px;
+  height: 61px;
+  background-image: url(../images/doubleArrowsDown.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-animation: arrowDown 1s infinite;
+          animation: arrowDown 1s infinite;
+}
+
 .develForm {
   position: relative;
   padding-left: 4.3em;
@@ -1199,36 +1237,6 @@ body {
   height: 101px;
   background-color: #EC6A1F;
   left: -1.1em;
-}
-.develForm .develForm__attetion {
-  position: absolute;
-  bottom: 12.5em;
-  left: 68em;
-  background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 1em;
-     -moz-column-gap: 1em;
-          column-gap: 1em;
-  padding: 24px 46px;
-}
-.develForm .develForm__attetion .caption {
-  max-width: 100px;
-}
-.develForm .develForm__attetion .doubleArrowDown {
-  border-radius: 100%;
-  border: 1px #E8E8E8 solid;
-  width: 61px;
-  height: 61px;
-  background-image: url(../images/doubleArrowsDown.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-animation: arrowDown 1s infinite;
-          animation: arrowDown 1s infinite;
 }
 .develForm .develForm__inner {
   display: -webkit-box;
