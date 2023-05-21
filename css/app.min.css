@@ -1536,6 +1536,61 @@ body {
 .project .project__inner .project__gallery .project__item .galleryTitle {
   text-align: center;
 }
+.project .project__pagination {
+  margin: 0 auto;
+  max-width: 250px;
+  margin-top: 2em;
+}
+.project .project__pagination .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.project .project__pagination .pagination li {
+  list-style-type: none;
+}
+.project .project__pagination .pagination li a {
+  display: block;
+  border-radius: 100%;
+}
+.project .project__pagination .pagination li a:not(a.leftArrow, a.rightArrow, .active) {
+  background-color: #E2E2E2;
+  width: 9px;
+  height: 9px;
+}
+.project .project__pagination .pagination li a.active {
+  background-color: #8B8B8B;
+  position: relative;
+  width: 9px;
+  height: 9px;
+}
+.project .project__pagination .pagination li a.active::before {
+  content: "";
+  border: 1px solid #EC6A1F;
+  border-radius: 100%;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+}
+.project .project__pagination .pagination .leftArrow {
+  background-image: url(../images/leftArrow.svg);
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 14px;
+  margin-top: -3px;
+}
+.project .project__pagination .pagination .rightArrow {
+  background-image: url(../images/rightArrow.svg);
+  background-repeat: no-repeat;
+  margin-top: -3px;
+  width: 12px;
+  height: 14px;
+}
 
 .freeCon {
   margin-left: 1em;
@@ -1761,6 +1816,11 @@ body {
           column-gap: 1em;
   line-height: 1;
   text-align: right;
+}
+.footer .footer__inner .footer__contacts .contact__item .address .text {
+  max-width: 233px;
+  text-align: left;
+  line-height: 1.4;
 }
 .footer .footer__inner .footer__contacts .field {
   display: -webkit-box;
