@@ -3560,6 +3560,7 @@ template {
 [hidden] {
   display: none;
 }
+@charset "UTF-8";
 .steps__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3567,6 +3568,9 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-column-gap: 2em;
+     -moz-column-gap: 2em;
+          column-gap: 2em;
 }
 .steps__item:nth-child(even) {
   -webkit-box-orient: horizontal;
@@ -3575,7 +3579,11 @@ template {
           flex-direction: row-reverse;
 }
 .steps__item .steps__content .list {
-  list-style-type: "-";
+  list-style-type: "—";
+}
+.steps__item .steps__count {
+  font-size: 6.5rem;
+  font-weight: 800;
 }
 /*!
  * Bootstrap Reboot v5.2.3 (https://getbootstrap.com/)
