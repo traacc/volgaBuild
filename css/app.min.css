@@ -2075,6 +2075,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  row-gap: 1.2em;
 }
 .news__inner .news__item {
   display: -webkit-box;
@@ -2083,16 +2084,29 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-column-gap: 1.8em;
+     -moz-column-gap: 1.8em;
+          column-gap: 1.8em;
 }
 .news__inner .news__item--active .news__desc {
   background-color: #EC6A1F;
   color: #fff;
-  padding: 50px;
+}
+.news__inner .news__item .news__date {
+  font-weight: 300;
+}
+.news__inner .news__item .news__date .year {
+  font-size: 2rem;
+  color: #797979;
+}
+.news__inner .news__item .news__date .date {
+  color: #EC6A1F;
 }
 .news__inner .news__item .news__desc {
   border: 1px solid #ccc;
   position: relative;
   border-radius: 20px;
+  padding: 50px;
 }
 .news__inner .news__item .news__desc::before {
   content: "";
@@ -2102,14 +2116,31 @@ body {
   border-right: 1px solid #ccc;
   border-radius: 100%;
   background-color: #fff;
-  top: 50%;
-  left: -27px;
+  top: calc(50% - 12px);
+  left: -23px;
 }
 .news__inner .news__item:nth-child(even) {
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.news__inner .news__item:nth-child(even) .news__desc::before {
+  border-left: 1px solid #ccc;
+  border-right: 0;
+  left: auto;
+  right: -23px;
+}
+
+.news__more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1em;
+  margin-bottom: 3em;
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
