@@ -998,6 +998,12 @@ body {
           box-sizing: border-box;
 }
 
+.equipment__inner h2 {
+  text-align: center;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
 .equipment__types {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1007,11 +1013,15 @@ body {
   -webkit-column-gap: 0.5em;
      -moz-column-gap: 0.5em;
           column-gap: 0.5em;
+  row-gap: 1em;
+  margin-bottom: 1em;
 }
 .equipment__types .equipment__type {
   padding: 14px 40px;
   border: 1px solid #E4E4E4;
   border-radius: 5px;
+  max-width: 500px;
+  text-align: center;
 }
 .equipment__types .equipment__type--active {
   color: #fff;
@@ -1021,8 +1031,64 @@ body {
 .equipment__list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
+  -ms-grid-columns: auto 1em auto 1em auto;
   grid-template-columns: auto auto auto;
+  gap: 1em;
+  margin-bottom: 3em;
+}
+.equipment__list .equipment__item {
+  background-image: url("../images/eq.jpg");
+  background-size: cover;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #fff;
+  height: 400px;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.equipment__list .equipment__item::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(236, 106, 31, 0.8980392157);
+  z-index: -1;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  -webkit-transition: width 0.2s ease-out;
+  -o-transition: width 0.2s ease-out;
+  transition: width 0.2s ease-out;
+}
+.equipment__list .equipment__item::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/logo.svg);
+  top: 20px;
+  left: -100px;
+  width: 70px;
+  height: 61px;
+  -webkit-transition: left 0.2s ease-out;
+  -o-transition: left 0.2s ease-out;
+  transition: left 0.2s ease-out;
+}
+.equipment__list .equipment__item .equipment__title {
+  max-width: 80%;
+  font-size: 1.1rem;
+}
+.equipment__list .equipment__item:hover::before {
+  width: 75%;
+}
+.equipment__list .equipment__item:hover::after {
+  left: 30px;
 }
 @charset "UTF-8";
 /*!
