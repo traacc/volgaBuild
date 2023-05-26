@@ -2596,20 +2596,21 @@ body {
   font-size: 1.75rem;
   margin-bottom: 1em;
 }
-.project .project__inner {
+.project .project__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-column-gap: 2em;
      -moz-column-gap: 2em;
           column-gap: 2em;
+  margin-bottom: 2em;
 }
-.project .project__inner .project__desc {
+.project .project__item .project__desc {
   text-align: justify;
   font-size: 0.9rem;
   line-height: 1.2;
 }
-.project .project__inner .project__gallery {
+.project .project__item .project__gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2617,7 +2618,7 @@ body {
      -moz-column-gap: 1em;
           column-gap: 1em;
 }
-.project .project__inner .project__gallery .project__item {
+.project .project__item .project__gallery .project__image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2626,10 +2627,10 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.project .project__inner .project__gallery .project__item img {
+.project .project__item .project__gallery .project__image img {
   margin-bottom: 0.7em;
 }
-.project .project__inner .project__gallery .project__item .galleryTitle {
+.project .project__item .project__gallery .project__image .galleryTitle {
   text-align: center;
 }
 .project .project__pagination {
@@ -2686,6 +2687,23 @@ body {
   margin-top: -3px;
   width: 12px;
   height: 14px;
+}
+
+.f-carousel__dots li.is-current {
+  position: relative;
+}
+.f-carousel__dots li.is-current .f-carousel__dot {
+  background-color: #8B8B8B;
+}
+.f-carousel__dots li.is-current::before {
+  content: "";
+  border: 1px solid #EC6A1F;
+  border-radius: 100%;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  right: 1px;
+  bottom: 4px;
 }
 
 .freeCon {
@@ -3541,6 +3559,23 @@ template {
  */
 [hidden] {
   display: none;
+}
+.steps__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.steps__item:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.steps__item .steps__content .list {
+  list-style-type: "-";
 }
 /*!
  * Bootstrap Reboot v5.2.3 (https://getbootstrap.com/)
